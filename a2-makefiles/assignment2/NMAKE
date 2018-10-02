@@ -1,0 +1,16 @@
+CC=cl
+LD=cl
+CFLAGS=/c
+LDFLAGS=/Fe
+OBJ=main.obj input.obj output.obj
+STD_HEADERS=prototypes.h
+EXE=random.exe
+
+
+
+
+$(EXE): $(OBJ)
+$(LD) $(OBJ) $(LDFLAGS)$(EXE)
+
+source.obj: source.c $(STD_HEADERS)
+$(CC) source.c $(CFLAGS)
